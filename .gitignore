@@ -1,3 +1,28 @@
 .vscode/
 .git-push.sh
 
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform crash log files
+crash.log
+
+# Terraform variable override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform plan files
+*.tfplan
+
+# Terraform provider lock files
+.terraform.lock.hcl
+
+# Terraform module directories
+.terraform/
+
+# macOS files
+.DS_Store
+
