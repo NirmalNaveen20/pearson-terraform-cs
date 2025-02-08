@@ -26,3 +26,11 @@ override.tf.json
 # macOS files
 .DS_Store
 
+# Public and private keys
+*.pem
+*.key
+*.pub
+
+# AWS keys
+aws_key
+
