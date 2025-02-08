@@ -7,17 +7,17 @@ resource "aws_instance" "lesson_06" {
     aws_security_group.sg_https.id,
     aws_security_group.sg_http.id
   ]
-  
-  
 
+  user_data = file("../scripts/apache-mkdocs.yaml")
   tags = {
-    Name                  = "Lesson_06-Cloud-Init"    
+    Name      = "Lesson_06-Cloud-Init"
+    timestamp = timestamp()
   }
 }
 
 resource "aws_key_pair" "deployer" {
   key_name   = "aws_key"
-  public_key = "ssh-ed25519 AAAA-etc..."
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPOQAcvGGXFiFgXdyw5W/EiFJPJOUtdHiv4orHPAz3q8 nirmalnaveen@Nirmals-MacBook-Pro.local"
 }
 
 resource "aws_security_group" "sg_ssh" {
