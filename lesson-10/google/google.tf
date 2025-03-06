@@ -9,7 +9,7 @@ terraform {
 
 provider "google" {
   # Modify the project name to match yours!
-  project = "project-1-<ID_number>"
+  project = "ptoject-1-452903"
   region  = "us-east4"
 }
 

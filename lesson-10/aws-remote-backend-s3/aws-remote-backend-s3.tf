@@ -3,7 +3,7 @@
 
 terraform {
   backend "s3" {
-    bucket = "dpro-bucket-backend"
+    bucket = "dpro-tf-state"
     key    = "dir1/key"
     region = "us-east-2"
   }
