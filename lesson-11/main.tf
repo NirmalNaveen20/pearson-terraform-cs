@@ -1,9 +1,16 @@
 ## PUT TERRAFORM CLOUD BLOCK HERE!  ##
 
 terraform {
-  
-  
-  
+
+  cloud {
+
+    organization = "Advanced-Terraform-Cloud"
+
+    workspaces {
+      name = "tf_cloud_test"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
