@@ -24,6 +24,9 @@ resource "aws_iam_user" "accounts_2" {
   # Add a lifecycle sub-block here with the prevent_destroy meta-argument set to true.
   # Apply the users, then attempt to destroy them and analyze the error.
 
+  lifecycle {
+    create_before_destroy = false
+  }
 
 }
 
