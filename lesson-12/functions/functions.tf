@@ -14,3 +14,12 @@ provider "aws" {
 }
 
 # Add IAM user resource here and use functions!
+
+resource "aws_iam_user" "name" {
+  name = "function-user"
+  tags = {
+    department   = "tech ops"
+    environment  = "dev"
+    time_created = timestamp()
+  }
+}
