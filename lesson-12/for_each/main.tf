@@ -14,12 +14,21 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-2"  
+  region = "us-east-2"
 }
 
 ## Add an IAM user resource here using a for_each meta-argument with a toset function.
 ## Include four users in the set. Remember to use this syntax ([]) for the toset function.
 
+resource "aws_iam_user" "accounts" {
+  for_each = toset(["user1", "user2", "user3", "user4"])
+  name     = each.key
+
+  tags = {
+    time_created = timestamp()
+    department = "Engineering"
+  }
+}
 
 
 
