@@ -18,7 +18,17 @@ resource "aws_instance" "splat_lab" {
   instance_type = "t2.micro"
 
   # Add your block devices here!
-  
+
+  ebs_block_device {
+    device_name = "sda1"
+    volume_size = 16
+  }
+
+  ebs_block_device {
+    device_name = "sda2"
+    volume_size = 16
+  }
+
   tags = {
     Name = "Splat-Lab"
   }
