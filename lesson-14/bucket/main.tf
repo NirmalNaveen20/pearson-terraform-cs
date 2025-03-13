@@ -12,7 +12,7 @@ module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
   version = "3.14.0"
   # Pick a name for your bucket and type it in the double-quotes. Add this to instances/version.tf as well
-  bucket = ""
+  bucket = "macpro-tf-21"
   acl    = "private"
   force_destroy = true
 

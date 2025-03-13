@@ -1,0 +1,19 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "aws_iam_user.accounts" [label="aws_iam_user.accounts"];
+  "aws_instance.web_server_1" [label="aws_instance.web_server_1"];
+  "aws_instance.web_server_2" [label="aws_instance.web_server_2"];
+  "aws_key_pair.deployer_ohio" [label="aws_key_pair.deployer_ohio"];
+  "aws_key_pair.deployer_virginia" [label="aws_key_pair.deployer_virginia"];
+  "aws_security_group.sg_webserver_ohio" [label="aws_security_group.sg_webserver_ohio"];
+  "aws_security_group.sg_webserver_virginia" [label="aws_security_group.sg_webserver_virginia"];
+  "random_id.instance_id_1" [label="random_id.instance_id_1"];
+  "random_id.instance_id_2" [label="random_id.instance_id_2"];
+  "aws_iam_user.accounts" -> "aws_instance.web_server_1";
+  "aws_iam_user.accounts" -> "aws_instance.web_server_2";
+  "aws_instance.web_server_1" -> "aws_security_group.sg_webserver_ohio";
+  "aws_instance.web_server_1" -> "random_id.instance_id_1";
+  "aws_instance.web_server_2" -> "aws_security_group.sg_webserver_virginia";
+  "aws_instance.web_server_2" -> "random_id.instance_id_2";
+}

@@ -20,7 +20,7 @@ resource "aws_instance" "web_server_1" {
 resource "aws_instance" "web_server_2" {
   # depends_on = [ azurerm_linux_virtual_machine.azure_vm_1 ]
   provider = aws.virginia
-  ami           = "ami-053b0d53c279acc90"
+  ami           = "ami-0b6d6dacf350ebc82"
   instance_type =  var.instance_type
   key_name      = var.ssh_key
   vpc_security_group_ids = [aws_security_group.sg_webserver_virginia.id]
